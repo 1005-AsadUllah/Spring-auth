@@ -18,6 +18,9 @@ public class AuthController {
     private final AuthService authService;
     @PostMapping("register")
     public ResponseEntity<UserDto> registerUser(@RequestBody UserDto userDto) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(authService.registerUser(userDto));
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .body(authService
+                        .registerUser(userDto));
     }
 }
