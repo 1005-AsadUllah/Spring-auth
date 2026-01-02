@@ -1,6 +1,16 @@
 package com.Spring_auth.dto;
 
-import java.util.Set;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public record RoleDto(Long id, String name) {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class RoleDto {
+
+    private Long id;
+    private String role;
 }
