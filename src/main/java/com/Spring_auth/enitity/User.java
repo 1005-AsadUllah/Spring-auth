@@ -41,6 +41,7 @@ public class User implements UserDetails {
     private Instant createdAt = Instant.now();
     private Instant updatedAt = Instant.now();
 
+    @Enumerated(EnumType.STRING)
     private Provider provider = Provider.LOCAL;
 
     @ManyToMany(fetch = FetchType.EAGER)
