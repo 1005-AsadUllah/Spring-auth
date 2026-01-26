@@ -84,11 +84,11 @@ public class JwtService {
     }
 
     public Jws<Claims> parse(String token) {
-        try{
-            return Jwts.parser().verifyWith(signingKey).requireIssuer(issuer).build().parseSignedClaims(token);
-        }catch (JwtException e){
-            throw e;
-        }
+        return Jwts.parser()
+                .verifyWith(signingKey)
+                .requireIssuer(issuer)
+                .build()
+                .parseSignedClaims(token);
     }
 
     public boolean isAccessToken(String token){
